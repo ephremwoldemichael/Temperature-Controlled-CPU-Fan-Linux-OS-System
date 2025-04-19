@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fan Dashboard</title>
+  <meta http-equiv="refresh" content="5">
+  <style>
+    body { font-family: Arial; background: #f4f4f4; text-align: center; padding: 50px; }
+    .card {
+      background: white;
+      padding: 20px;
+      width: 300px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .status-on { color: green; font-weight: bold; }
+    .status-off { color: red; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Fan Control Dashboard</h1>
+    <p><strong>Temperature:</strong> {{ temp }}°C</p>
+    <p><strong>Fan Status:</strong>
+      <span class="{{ 'status-on' if status == 'ON' else 'status-off' }}">{{ status }}</span>
+    </p>
+    <p>Last Updated: {{ time }}</p>
+  </div>
+</body>
+</html>
+
